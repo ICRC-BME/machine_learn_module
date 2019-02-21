@@ -261,6 +261,8 @@ class iEEG_machine_learn:
         elif cases == 'positive':
             X = self.POS_X[:, self.sel_features_map]
             y = self.POS_y
+            pats_df = self._pos_patients_df
+            splits = self.pos_pat_splits
         elif cases == 'negative':
             X = self.NEG_X[:, self.sel_features_map]
             y = self.NEG_y
